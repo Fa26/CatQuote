@@ -1,0 +1,10 @@
+<div style="position: absolute; font-size:55px; top:230px">
+<h1 class="" >Editing Article</h1>
+</div>
+
+<%= render 'form', article: @article %> 
+
+<div class="ml-4">
+<%= link_to 'Show', @article,class:"rounded-md p-2" %> |
+<%= link_to 'Back', articles_path,class:" rounded-md p-2" %>
+</div>

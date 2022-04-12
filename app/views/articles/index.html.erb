@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div style="position: absolute; font-size:55px; top:230px">
+<h1>Quotes </h1>
+</div>
+
+
+
+<div class="p-4" style="position: absolute; top: 280px;left: 90px; " >
+  <% @articles.each do |article| %>
+   <div class="bg-cover bg-center rounded-md " style="background: url('https://cdn.pixabay.com/photo/2022/01/16/23/12/desert-6943430_960_720.jpg'); width:200px;height: 200px;"> 
+  </div>
+
+  <div class="bg-blue-100  " style="">
+      <h3 class=""><strong><%= article.title%></strong></h3>
+      <p><%= article.body%></p>
+      <br>
+      <h4><%= link_to 'Edit', edit_article_path(article)%></h4>
+      <h4><%= link_to 'Destroy', article,method: :delete, data:{confirm:' Are you sure?'}%></h4>
+      <h4  class=""><%= link_to 'Show', article %></h4>  
+  </div>
+   <br>
+   <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Article', new_article_path,class:"bg-black-200 text-black-500 rounded-md p-2 mt-4 " %>
+<%= link_to "Home", home_index_path,
+   class:"text-black-500 rounded-md p-2 mt-4" %>
